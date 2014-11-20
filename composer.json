@@ -1,0 +1,18 @@
+{
+    "name": "knyga/cmap",
+    "description": "Component for Yii Framework for grouping and filtering",
+    "homepage": "https://github.com/knyga/sms-sender",
+    "keywords": ["knyga", "group", "map", "filter", "yii", "component"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Oleksandr Knyga",
+            "email": "oleksandrknyga@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "yiisoft/yii": "1.1.*"
+    }
+}
