@@ -1,7 +1,7 @@
 {
     "name": "knyga/kmap",
     "description": "Component for Yii Framework for grouping and filtering",
-    "homepage": "https://github.com/knyga/sms-sender",
+    "homepage": "https://github.com/knyga/kmap",
     "keywords": ["knyga", "group", "map", "filter", "yii", "component"],
     "license": "MIT",
     "minimum-stability": "dev",
