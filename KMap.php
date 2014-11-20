@@ -76,7 +76,7 @@ class KMap
 	 * @param  string $attribute name of attribute
 	 * @return misc            value from attribute
 	 */
-	public static function get(array $model, $attribute)
+	public static function get($model, $attribute)
 	{
 		if($model instanceof CActiveRecord) {
 			return $model->getAttribute($attribute);
