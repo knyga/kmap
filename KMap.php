@@ -38,7 +38,7 @@ class KMap
 	 * @return array            filtered objects
 	 */
 	public static function filter(array $models, $condition = array()) {
-		return array_filter($models, function($model) use($condition) {
+		$arr = array_filter($models, function($model) use($condition) {
 
 			foreach($condition as $key=>$value) {
 				if(!self::has($model, $key)) {
@@ -55,6 +55,8 @@ class KMap
 			return true;
 
 		});
+
+		return array_values($arr);
 	}
 
 	/**
