@@ -1,5 +1,5 @@
 {
-    "name": "knyga/cmap",
+    "name": "knyga/kmap",
     "description": "Component for Yii Framework for grouping and filtering",
     "homepage": "https://github.com/knyga/sms-sender",
     "keywords": ["knyga", "group", "map", "filter", "yii", "component"],

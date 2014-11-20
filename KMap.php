@@ -1,6 +1,6 @@
 <?php
 
-class CMap
+class KMap
 {
 	public static function group(array $models, $attribute)
 	{
