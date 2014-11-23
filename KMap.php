@@ -9,23 +9,27 @@ class KMap
 	 * Groups objects by same attribute
 	 * @param  array  $models    
 	 * @param  string $attribute name of the attribute
+	 * @param  boolean $isIgnoreCase if true then case will be ignored during the grouping
 	 * @return array            grouped objects, key => array
 	 */
-	public static function group(array $models, $attribute)
+	public static function group(array $models, $attribute, $isIgnoreCase = false)
 	{
 		$output=array();
 		
 		for($i=0; $i<count($models); $i++)
 		{
 			if($models[$i] instanceof CActiveRecord) {
-				$output[$models[$i]->getAttribute($attribute)][]=$models[$i];
+				$name = $models[$i]->getAttribute($attribute);
 			} elseif(is_object($models[$i])) {
-				$output[$models[$i]->$attribute][]=$models[$i];
+				$name = $models[$i]->$attribute;
 			} elseif(is_array($models[$i])) {
-				$output[$models[$i][$attribute]][]=$models[$i];
+				$name = $models[$i][$attribute];
 			} else {
 				throw new Exception('Unsapported operands type');
 			}
+
+			$name = $isIgnoreCase ? strtolower($name) : $name;
+			$output[$name][]=$models[$i];
 		}
 
 		return $output;
